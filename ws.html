@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>筑英台</title>
+  </head>
+  <body>
+    <div class="wx"></div>
+    <script>
+      var href = window.location.href;
+      var params = href.split('?')[1];
+      var code = '',state = '';
+      if(params.indexOf('&') !== -1) {
+        code = params.split('&')[0].split('=')[1];
+        var state = params.split('&')[1].split('=')[1];
+        window.location.href = 'https://zyt-dev.arctron.cn/#/m/login?code='+code+'&state='+state;
+      }
+    </script>
+  </body>
+</html>
